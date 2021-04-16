@@ -1,0 +1,25 @@
+apply plugin: 'groovy'
+//apply plugin: 'maven'
+apply plugin: 'com.github.dcendents.android-maven'
+
+dependencies {
+
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation 'com.android.tools.build:gradle:3.6.1'
+
+    implementation "com.android.tools.build:transform-api:1.5.0"
+
+    // ASM 相关依赖
+    implementation 'org.ow2.asm:asm:7.1'
+    implementation 'org.ow2.asm:asm-commons:7.1'
+}
+
+//version='1.0.0'
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            repository(url: uri('../custom_log_repo'))
+//        }
+//    }
+//}
