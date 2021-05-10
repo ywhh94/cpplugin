@@ -1,3 +1,6 @@
+include ':cpplugin_annotation'
+include ':login'
+include ':base'
 include ':cpplugin'
 include ':app'
 rootProject.name = "PluginCp"

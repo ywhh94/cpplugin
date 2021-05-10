@@ -1,15 +1,23 @@
 package com.ywh.plugincp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
+import android.util.Log;
 
-public class MainActivity extends AppCompatActivity {
+import com.ywh.base.BaseActivity;
+import com.ywh.base.TestActivity;
+
+
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        startActivity(new Intent(this, TestActivity.class));
+
     }
+
 }

@@ -1,12 +1,22 @@
 apply plugin: 'groovy'
-//apply plugin: 'maven'
-apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'java-library'
+apply plugin: 'maven'
+//apply plugin: 'org.jetbrains.kotlin.jvm'
+//apply plugin: 'com.github.dcendents.android-maven'
+
+
+//repositories {
+//    google()
+//    jcenter()
+//    mavenCentral()
+//}
 
 dependencies {
-
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.32"
     implementation gradleApi()
     implementation localGroovy()
-    implementation 'com.android.tools.build:gradle:3.6.1'
+    implementation 'com.android.tools.build:gradle:4.0.1'
 
     implementation "com.android.tools.build:transform-api:1.5.0"
 
@@ -15,11 +25,30 @@ dependencies {
     implementation 'org.ow2.asm:asm-commons:7.1'
 }
 
-//version='1.0.0'
-//uploadArchives {
-//    repositories {
-//        mavenDeployer {
-//            repository(url: uri('../custom_log_repo'))
-//        }
-//    }
+
+version = "1.1.5"
+group = 'com.efg'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('E:/repo'))
+
+//            repository(url: RELEASE_URL) {
+//                authentication(userName: "", password: "")
+//            }
+        }
+    }
+}
+
+//打包jar
+//task deleteOldJar(type: Delete) {
+//    delete 'release/classes.jar'
 //}
+//task exportJar(type: Copy) {
+//    from('build/intermediates/bundles/release/')
+//    into('release/')
+//    include('classes.jar')
+//    rename('classess.jar', 'com.ywh.cpplugin.jar')
+//}
+//exportJar.dependsOn(deleteOldJar, build)

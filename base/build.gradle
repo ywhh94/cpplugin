@@ -1,12 +1,7 @@
 plugins {
-    id 'com.android.application'
-    id 'style-checkbase'
-}
+    id 'com.android.library'
+    id 'kotlin-android'
 
-checkBase {
-    throwException = false
-    exceptionAtOnce = false
-    openLog = true
 }
 
 android {
@@ -14,12 +9,12 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.ywh.plugincp"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -32,24 +27,18 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
-//    productFlavors {
-//        google {
-//
-//        }
-//        qh360 {
-//
-//        }
-//        baidu {
-//
-//        }
-//        self {
-//
-//        }
-//    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(path: ':base')
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    api 'androidx.core:core-ktx:1.2.0'
+    api 'androidx.appcompat:appcompat:1.1.0'
+    api 'com.google.android.material:material:1.1.0'
+    api 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    api project(path: ':cpplugin_annotation')
 }
