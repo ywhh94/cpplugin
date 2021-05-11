@@ -1,4 +1,4 @@
-package com.ywh.plugincp;
+package com.ywh.plugin.demo;
 
 public class MyFragment extends BaseFragment{
 }

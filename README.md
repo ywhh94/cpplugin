@@ -2,7 +2,6 @@
     检查所有Activity是否都继承BaseActivity
 
 plugins {
-    id 'com.android.application'
     id 'style-checkbase'
 }
 

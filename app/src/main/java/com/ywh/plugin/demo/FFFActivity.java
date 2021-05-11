@@ -1,10 +1,8 @@
-package com.ywh.plugincp;
+package com.ywh.plugin.demo;
 
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
-
-import com.ywh.cpp.annotation.IgnoreCheck;
 
 public class FFFActivity  extends FBaseActivity{
     @Override

@@ -1,8 +1,6 @@
-package com.ywh.plugincp;
+package com.ywh.plugin.demo;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.ywh.cpp.annotation.IgnoreCheck;
 
 public class TestAppCompatActivity extends AppCompatActivity {
 }

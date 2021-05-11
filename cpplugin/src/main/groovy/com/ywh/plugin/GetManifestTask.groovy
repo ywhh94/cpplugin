@@ -1,9 +1,9 @@
-package com.ywh.p
+package com.ywh.plugin
 
-import com.ywh.util.LogDebug
+import com.ywh.plugin.checkbase.LogDebug
+import com.ywh.plugin.checkbase.Utils
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
-import com.ywh.util.Utils
 
 public class GetManifestTask extends DefaultTask {
 

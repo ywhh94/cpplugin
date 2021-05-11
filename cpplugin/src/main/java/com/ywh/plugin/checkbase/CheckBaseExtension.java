@@ -1,4 +1,4 @@
-package com.ywh.util;
+package com.ywh.plugin.checkbase;
 
 public class CheckBaseExtension {
 

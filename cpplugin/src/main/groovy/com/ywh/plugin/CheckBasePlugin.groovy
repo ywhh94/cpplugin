@@ -1,9 +1,9 @@
-package com.ywh.p
+package com.ywh.plugin
 
 import com.android.build.gradle.AppExtension
-import com.ywh.util.Cons
-import com.ywh.util.Utils
-import com.ywh.util.CheckBaseExtension
+import com.ywh.plugin.checkbase.Cons
+import com.ywh.plugin.checkbase.Utils
+import com.ywh.plugin.checkbase.CheckBaseExtension
 import org.gradle.api.Action;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project

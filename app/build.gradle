@@ -14,7 +14,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.ywh.plugincp"
+        applicationId "com.ywh.plugin.demo"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1

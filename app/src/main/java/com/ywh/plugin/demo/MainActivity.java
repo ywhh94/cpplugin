@@ -1,10 +1,7 @@
-package com.ywh.plugincp;
+package com.ywh.plugin.demo;
 
 import android.content.Intent;
-import android.content.pm.ResolveInfo;
 import android.os.Bundle;
-import android.util.Log;
-
 import com.ywh.base.BaseActivity;
 import com.ywh.base.TestActivity;
 

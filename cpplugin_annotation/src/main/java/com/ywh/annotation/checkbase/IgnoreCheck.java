@@ -1,4 +1,4 @@
-package com.ywh.cpp.annotation;
+package com.ywh.annotation.checkbase;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

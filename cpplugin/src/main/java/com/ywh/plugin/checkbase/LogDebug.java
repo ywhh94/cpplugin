@@ -1,8 +1,7 @@
-package com.ywh.util;
+package com.ywh.plugin.checkbase;
 
 public class LogDebug {
     private String fromClass;
-
 
     public LogDebug(String fromClass) {
         this.fromClass = fromClass;

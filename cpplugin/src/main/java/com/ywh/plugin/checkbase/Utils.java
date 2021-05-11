@@ -1,4 +1,4 @@
-package com.ywh.util;
+package com.ywh.plugin.checkbase;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,12 +32,12 @@ public class Utils {
 
     //添加baseClass
     public static void addBaseClass(String className, String annotation) {
-        if ("Lcom/ywh/cpp/annotation/BaseActivityCheck;".equals(annotation)) {
+        if (Cons.ANNOTATION_BASE_ACTIVITY.equals(annotation)) {
             baseActivityList.add(className);
             return;
         }
 
-        if ("Lcom/ywh/cpp/annotation/IgnoreCheck;".equals(annotation)) {
+        if (Cons.ANNOTATION_IGNORE.equals(annotation)) {
             ignoreList.add(className);
             return;
         }
@@ -69,19 +69,6 @@ public class Utils {
         manifestActivitys.add(handlerUserActivity(activity));
     }
 
-    public static int getManifestAcSize() {
-        return manifestActivitys.size();
-    }
-
-    private static void clearData() {
-        manifestActivitys.clear();
-        ignoreList.clear();
-        baseActivityList.clear();
-        classWithParent.clear();
-        trueActivity.clear();
-        falseActivity.clear();
-    }
-
     /**
      * 获取 [{http://schemas.android.com/apk/res/android}name:com.ywh.base.TestActivity]中name对应值
      *
@@ -97,6 +84,19 @@ public class Utils {
             activity = activity.replace(".", "/");
         }
         return activity;
+    }
+
+    public static int getManifestAcSize() {
+        return manifestActivitys.size();
+    }
+
+    private static void clearData() {
+        manifestActivitys.clear();
+        ignoreList.clear();
+        baseActivityList.clear();
+        classWithParent.clear();
+        trueActivity.clear();
+        falseActivity.clear();
     }
 
     //开始检查
@@ -183,7 +183,6 @@ public class Utils {
         }
     }
 
-    //开发测试打日志
     private static void logForUser(String action, List<String> list) {
         if (!mShowUserLog) {
             return;

@@ -1,4 +1,4 @@
-package com.ywh.plugincp;
+package com.ywh.plugin.demo;
 
 import android.app.Activity;
 import android.content.Context;
